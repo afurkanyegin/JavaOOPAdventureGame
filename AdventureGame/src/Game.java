@@ -54,7 +54,7 @@ public class Game {
 				break;
 			}
 			default:
-				location = new SafeHouse(player);
+				location = new Store(player);
 				break;
 			}
 		
