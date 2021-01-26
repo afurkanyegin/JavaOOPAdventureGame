@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Player {
-	private int damage,health,money;
+	private int damage,health,money,fullHealth;
 	private String name,cName;
 	Inventory inv;
 	Scanner scan = new Scanner(System.in);
@@ -14,36 +14,30 @@ public class Player {
 	public void selectCharacter() {
 		switch (characterMenu()) {
 		case 1: {
-			setcName("Samurai");
-			setDamage(5);
-			setHealth(21);
-			setMoney(15);
+			playerSpecs("Samurai",5,21,15);
 			break;
 		}
 		case 2: {
-			setcName("Archer");
-			setDamage(7);
-			setHealth(18);
-			setMoney(20);
+			playerSpecs("Archer", 7, 18, 20);
 			break;
 		}
 		case 3: {
-			setcName("Knight");
-			setDamage(8);
-			setHealth(24);
-			setMoney(5);
+			playerSpecs("Knight", 8, 24, 5);
 			break;
 		}
 		default:
-			setcName("Samurai");
-			setDamage(5);
-			setHealth(21);
-			setMoney(15);
+			playerSpecs("Samurai",5,21,15);
 			break;
 		}
 		System.out.println("Character Name: "+ getcName() + " | Damage:" +getDamage() +" | Health:"+getHealth() +" | Money:"+ getMoney());
 	}
-	
+	public void playerSpecs(String name,int atk,int hlth,int money) {
+		setcName(name);
+		setDamage(atk);
+		setHealth(hlth);
+		setMoney(money);
+		setFullHealth(hlth);
+	}
 	public int characterMenu() {
 		// TODO Auto-generated method stub
 		
@@ -95,6 +89,14 @@ public class Player {
 	}
 	public void setInv(Inventory inv) {
 		this.inv = inv;
+	}
+
+	public int getFullHealth() {
+		return fullHealth;
+	}
+
+	public void setFullHealth(int fullHealth) {
+		this.fullHealth = fullHealth;
 	}
 	
 	
