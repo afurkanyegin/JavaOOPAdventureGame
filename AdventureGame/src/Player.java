@@ -12,6 +12,10 @@ public class Player {
 		this.inv=new Inventory();
 	}
 	
+	public int getTotalDamage() {
+		return this.getDamage()+this.getInv().getDamage();
+	}
+	
 	public void selectCharacter() {
 		switch (characterMenu()) {
 		case 1: {

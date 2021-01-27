@@ -50,7 +50,7 @@ public class Game {
 				break;
 			}
 			case 5: {
-				location = new SafeHouse(player);
+				location = new Store(player);
 				break;
 			}
 			default:

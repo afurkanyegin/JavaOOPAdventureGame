@@ -8,6 +8,7 @@ public abstract class NotSafeLocations extends Location{
 		// TODO Auto-generated constructor stub
 	}
 	public boolean notDead() {
+		int enemyCount= enemy.enemyCount()	;
 		return true;
 	}
 	
