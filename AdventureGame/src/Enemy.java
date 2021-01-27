@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Enemy {
 	private String name;
-	private int damage,award,health,maxNumber;
+	private int damage,award,health,maxNumber,defHealth;
 	
 	public Enemy(String name, int damage, int award, int health, int maxNumber) {
 		this.name = name;

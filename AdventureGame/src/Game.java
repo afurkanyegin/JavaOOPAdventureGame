@@ -38,15 +38,15 @@ public class Game {
 				break;
 			}
 			case 2: {
-				location = new SafeHouse(player);
+				location = new Cave(player);
 				break;
 			}
 			case 3: {
-				location = new SafeHouse(player);
+				location = new Forest(player);
 				break;
 			}
 			case 4: {
-				location = new SafeHouse(player);
+				location = new River(player);
 				break;
 			}
 			case 5: {
